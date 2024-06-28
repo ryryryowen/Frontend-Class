@@ -1,0 +1,173 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* styles.css */
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 50px;
+  font-family: "Aldrich", sans-serif;
+  margin-left: 50px;
+}
+
+header nav {
+  text-align: center;
+  margin-right: 120px;
+}
+
+header nav ul {
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #1a56f0;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Abel", sans-serif;
+}
+
+header nav ul li a:hover {
+  border-bottom: 2px solid #1a56f0;
+}
+
+main {
+  padding-top: 70px; /* Adjust for the fixed header */
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #fff; /* Light blue background */
+}
+
+.hero-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+.hero-image {
+  flex: 0 0 460px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 460px;
+  height: 550px;
+  object-fit: cover;
+}
+
+.hero-image .more-about {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #1a56f0;
+  cursor: pointer;
+}
+
+.hero-text {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #fff; /* Light green background */
+}
+
+.about-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+.about-image {
+  flex: 0 0 700px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 700px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.about-text button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #1a56f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about-text button:hover {
+  background-color: #1a56f0;
+}
