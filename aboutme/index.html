@@ -1,56 +1,77 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="kr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About me</title>
+    <title>Document</title>
+    <!-- Style.css -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- Script.js -->
+    <script defer src="./script.js"></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/308cb3c90c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- NOTO SANS KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <div class="logo">Owen About</div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <div class="frame">
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <a href="">Owen's About</a>
+        </div>
+        <ul class="navbar_menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Project</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
+        <div class="navbar_code">
+          <button>CODE</button>
+        </div>
+        <a href="" class="navbar_toogleBtn">
+          <i class="fa-solid fa-bars"></i>
+        </a>
       </nav>
-    </header>
-    <main>
-      <section id="hero">
-        <div class="hero-content">
-          <div class="hero-image">
-            <img src="./img/Frame 57.png" alt="owen photo" />
-            <p class="more-about">more About</p>
+      <main>
+        <div class="dashboard">
+          <div class="dashboard_image">
+            <img src="./img/Frame 57.png" alt="dashboard_image" />
+            <button class="dashboard_btn">More About</button>
           </div>
-          <div class="hero-text">
+          <div class="dashboard_text">
             <h1>
-              안녕하세요 :) 프론트 엔드를 배우고 있는 코딩 초보 해오름입니다.
+              안녕하세요 :D <br />
+              프론트엔드를 배우고있는 <br />
+              코딩 초보 해오름 입니다.
             </h1>
-            <p>
-              이젠 아카데미에서 프론트엔드 수업을 받으면서 꾸준한 성장을 하고
-              있습니다.
+            <p class="dashboard_text">
+              구현가능한 언어는 아직 HTML,CSS,JS 언어만 구현가능하며,<br />
+              추후 REACT,NODE,VUE 언어까지 구현 <br />
+              <span class="dashboard_text_highlight">
+                가능한 풀스텍 개발자가 되는것이 목표입니다.
+              </span>
             </p>
-            <span>언어는 아직 HTML,CSS,JS 언어만 구현이 가능하며,</span>
-            <span>추후 REACT.JS, VUE.JS, NODE.JS언어까지 구현</span>
-            <span>가능한 풀스텍 개발자가 될 예정입니다.</span>
           </div>
         </div>
-      </section>
-
-      <section id="about">
-        <div class="about-content">
-          <div class="about-image">
-            <img src="./img/Frame 57.png" alt="About me 이미지" />
-          </div>
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>안녕하십니까! 해오름이라고 해요</p>
-            <button>MBTI / HOBBY</button>
-          </div>
+        <div class="aboutme">OWEN ABOUT</div>
+        <div class="Project">Project</div>
+      </main>
+      <footer class="owen_footer">
+        <h3 class="contact">CONTACT</h3>
+        <div class="links">
+          <a class="github" href="#">GITHUB</a>
+          <a class="instagram" href="#">INSTSGRAM</a>
         </div>
-      </section>
-    </main>
+        연락주십쇼
+      </footer>
+    </div>
   </body>
 </html>
