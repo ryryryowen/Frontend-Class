@@ -15,7 +15,7 @@ const items = document.querySelectorAll("#card_items li");
 items.forEach((item) => {
   item.addEventListener("mouseover", () => {
     item.style.transform = "translateY(-20px)";
-    item.style.transition = "all 0.3s";
+    item.style.transition = "all 0.5s";
   });
   item.addEventListener("mouseout", () => {
     item.style.transform = "translateY(0)";
