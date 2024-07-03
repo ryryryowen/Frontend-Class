@@ -1,0 +1,7 @@
+> 0, 1, 2, 3, 4
+
+mouseover & mouseover : 함께 세트
+> 이벤트 버블링 기능이 있음 O
+
+mouseenter & mouseleaver : 함께 세트
+> 이벤트 버블링 기능이 없음 X 

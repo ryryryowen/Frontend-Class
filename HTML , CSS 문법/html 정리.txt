@@ -1,0 +1,176 @@
+GUI방식 : 
+- Graphic User Interface 
+(*사용자로 하여금 눈에 보여지는 아이콘 혹은
+이미지들을 제어할 수 있도록 만들어진 인터페이스 형식)
+
+CLI방식 :
+- Command Line Interface (*특정 기능을 구현하기 위해서 명령프롬프트를
+사용할 수 있는 터미널에 접속해서 명령어로 요소들을 제어하는 인터페이스
+방식)
+
+HTML 문법 정리
+html : hyper text markup language
+ ! < 보일러 플레이트 
+*single tag VS  multi tag : 열고닫는 형식 
+- a / img / br / hr 등 = 싱글태그
+
+
+<!DOCTYPE html> = 선언문
+<html lang="ko"> = 프로젝트를 생성하는 개발자의 모국어
+ 머리와 몸통으로 나눠 쓴다 .
+머리 = head 
+몸통 = body 
+viewport = 디바이스의 화면 
+
+1.hn 태그 : heading 태그
+=h1 ~ h7 h1 > h6 
+<h> = 어딘가에 대표격인 문자를 쓰고자 할때 1~6 까지 있음 
+<h1> = 32px 
+-기본 속성이 없는 태그
+- 단락에서 타이틀을 정의
+
+2. p 태그 : paragraph 태그
+- 문장을 입력하고자 할 때
+-dummy 문장을 활용해서 임시로 문자열 입력 !!!
+- lorem = 의미가없는 문장이 나옴 여기에 문장이 들어간다는
+표현을 하고싶을때 사용.
+
+3.br 태그 : break 태그 
+-줄바꿈 태그 
+
+4. hr 태그 : Horizonatal Ruler 태그
+
+****중요 많이사용
+5. a 태그 : anchor 태그 :  특정 요소를 어딘가로 보내주는 태그 
+-반드시 href와 같은 속성 !!! 
+href = 속성 " " : 속성값
+-고유한 스타일 존재 => 초기 reset을 활용해서 제거!!!
+*문서상에서 내부이동!!!
+-*1개의 요소 안에서 복수의 링크를 설정 !!! 
+ area 태그 : 
+shape : 모양 coords : 좌표 href: 주소 alt : 이름 
+https://www.image-map.net/
+
+6.audio / video
+유튜브 영상 퍼가기 - <div class="container"> 입력후
+유튜브 공유 버튼 누르고 소스코드 복사후 붙혀놓기
+
+-source src=" "
+-실무에서는 그렇게까지 많이 사용할 상황이 안따르는 편임
+
+<audio src="./content/music.mp4" controls autoplay></audio> --오디오
+,
+<audio controls> 
+      <source src="./content/music.mp4" type="audio/mp4" />
+    </audio>
+-- 오디오
+
+7. 목록태그
+-ul / ol
+> unorder list : 카운팅을 하지 않기 위한 목록 ** 실무에서 많이사용
+> order lit : 순차적으로 카운팅을 하기 위한 목록 ** 사용을 잘안함
+> li 태그 함께해야지만 목록 기능을 적용이 가능 !!
+
+*중첩목록!!! << 많이씀  ul태그 안에 li태그 안에 또 ul 태그 안에 il태그
+
+8.테이블태그
+-table / tr(*행) / td(table data = 열)
+-border-collapse: collapse; << 많이씀 선들을 병합
+-열 가운데에서 대표격인 열 => th(table header) -많이씀
+-htma5 문법 > semantic 태그 (*의미없이 사용하는 div 태그 지양하자)
+-만약 table > thead / tbody / tfoot
+- rowspan = > 행을 병합하는 기능!!! (*본인을 포함해서 병합) 
+- colspan = > 열을 병합하는 기능 !!!! (* 본인을 포함해서 병합)
+- 프로그래밍 언어 역역 => 짝수 (even) / 홀수 (odd)
+-row(행) 을 그룹하는 것은 어렵지 않음 = > tr / thead ll tfoot
+- column(열) 을 그룹하는 것은 1가지 방법
+--열을 그룹화 하고싶을때 colgroup 태그 << 이태그도 동일하게 
+<col> 태그가 따라와야함  <col />      <= 홀태그임
+-colgroup > col : 몇 개의 열을 선택!!! = > span
+> thead & tfoot > colgroup 보다 스타일 우선 적용권을 가지고있음
+
+9. mark 태그 : 텍스트 뒷 배경컬러 (*형광)
+
+10.b태그 : bold의 약자 => 텍스트를 두껍게해주는 태구
+
+11. figure & figcaption : 악어 & 악어새 공생관계 
+-보통 일반적으로 테이블 태그 등을 사용할 때, 해당 요소의 타이틀을 정의하고자 할 때
+
+12. form 태그 : **** 중요해요 !!
+- action 속성 & method 속성을 갖고 있음
+- action : client(*웹브라우저)로 부터 특정 값을 받아서 server로 해당값을
+전송을 해야할 시 , 전송할 위치 경로를 정의하는 속성
+- method : 사용자에게 값을 받아서 처리하는 방식을 어떻게 할 것인지 구분하기위한 속성
+1) get : 사용자가 입력한 값을 서버에게 전달을 한 경우, 해당 값에 매칭되어지는 
+페이지를 서버가 반환하도록 하는 method 방식
+
+2) post : 단순히 특정 페이지를 그냥 가져와라 ! << 이게 아니라, 사용자가 입력한
+값을 반영한 업데이트되어진 페이지를 가져오고 싶을 때 사용하는 method 방식
+=> 유튜브 페이지 / 댓글
+
+- label : for 속성값 = input id 속성값 일치하는 경우, label 태그로 input 
+태그를 선택할 수 있도록 할 수 있음
+
+- 입력양식태그 같이 사용해야만 form 제 기능을 할 수 있음
+- input type = "text" : 아이디 및 텍스트 값을 받고자 할 때 사용
+- input type = "password" : 패스워드 같은 비밀스러운 값을 받고자 할 때
+- input type = "radio" : 여러개 후보들 중에 1개를 선택하고자 할 때
+- input type = "checkbox" : 여러개 후보들을 동시에 선택하고자 할 때
+- input type = "file" : 서버에 어떤 데이터를 업로드 하고자 할 때
+
+- 여러개의 옵션들 중에서 하나를 선택할 수 있도록 해주는 form 입력양식
+태그 = > select 태그
+- select 태그의 경우, 내부적으로 option 태그와 함께 사용해야만 정삭적인
+기능을 구현할 수 있음
+(*TIP, option 태그 중에서 메뉴명으로는 출력이 되나, 실제 사용자가
+선택하지 못하도록 설정 => selected disabled 속성)을 설정해야함
+- option 요소들을 그룹화 할 수 있음 : optgroup 이라는 태그 사용
+
+-form 태그 내부 요소들을 하나로 그룹핑하고 , 해당 요소들의 대표타이틀을 생성!!!
+1) fieldset : 해당 form 요소가 어떤 성격인지를 구분시키기 위한 목적 사용
+2) legend : filedset의 타이틀을 생성해주는 역활
+
+*HTML5 어려워하는 이유 !!
+> 공간분할태그
+
+1) block요소 태그 : 
+- 한 줄 (*한 행)을 모두 가져가는 속성
+- div / header / h(n) / p
+- width & height & Margin & Padding 모두 다 적용 !!
+
+2) inline요소 태그 : 
+- 본인의 너비 및 높이값만큼만 공간을 차지하는 속성
+-span / label / input
+- w & h = >  x
+- m & p = > 좌.우측 적용가능 / 상. 하측 적용가능
+
+3) inline-block요소 속성
+
+4) 만약, 부모요소 display : flex = > 자식요소는 block 으로 바꿈
+
+block VS Inline-block
+
+*중요!*
+Semantic Tag  :
+Semantic : 의미를 갖고 있는 / 의미론적인
+header : 문서상에 헤더의 역활 = > 머릿글 ll 인트로 역할
+nav : GNB ll LNB 와 같은 네비게이션 목록 역활
+aside : 사이드 측면 영역의 배너 혹은 지면 역활
+section : 실제 문서상의 본문 역할
+article :  section 태그안에 소단락(*세부영역) 나누는 역할
+footer : 문서상에 푸터의 역할 => 꼬리말 ll 에필로그 역할
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

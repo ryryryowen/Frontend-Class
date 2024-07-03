@@ -1,0 +1,12 @@
+html 2가지 분류 !!
+
+1) block 태그
+- 하나의 행을 모두 차지하도록 설정 
+-div
+
+2) inline 태그
+- 본인의 너비 및 높이값만큼만 차지하도록 설정 
+-span
+
+3) inline-block 태그
+- 태생적으로 inline / block
