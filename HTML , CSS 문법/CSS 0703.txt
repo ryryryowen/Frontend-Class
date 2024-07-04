@@ -24,8 +24,9 @@ viewport width / height
 
 2) display 속성 : none /  block / inline / inline-block
 none 과 block  서로 반대기능
-
+없앰
 3) visibility 속성 : visible / hidden / collapse
+없애긴하지만 존재는함
 
 4) opacity 속성 : 1 = > 100% || 0= > 0% : 투명
 
@@ -51,18 +52,79 @@ none 과 block  서로 반대기능
 = > 값 4개 : 좌상단 / 우상단 / 우하단 / 좌하단 : 좌상단부터 시계방향
 
 8) font 속성
-- font-family
-- font-size
-- font- weight
-- font-style
-
-
+- font-family :폰트종류
+- font-size : 폰트 크기
+- font- weight : 폰트 굵기
+- font-style : 폰트 종류?  기울기 ?
+- font : italic 4rem/5 "Nanum pen Script" , cursive;
+- line-height : 현재 작성된 텍스트의 높이를 제어목적 / 
+수직 정렬 = 세로 정렬 가능 !!! (*단문)
+- 행간 !!! = > 행과 행사이의 간격
 
 9) background 속성 
+- background-image : url() 를 사용해서 특정 이미지를 적용하고자 할 때
+(*이미지를 여러장 사용가능!! // 이미지의 확장자가 
+png=> 배경컬러투명 하게 만들때 사용하는 확장자)
 
+- background-color : 배경 컬러 이미지를 지정하고자 할 때
 
-10) float 속성
+- background-size 
+> cover : 현재 삽입하고자 하는 이미지의 너비를 중심으로 삽입
+
+> contain : 현재 삽입하고자 하는 이미지의 높이를 중심으로 삽입
+
+> % : 현재 삽입한 이미지를 출력하고 있는 매체의 너비를 기준으로 %비율을 적용하고자 할 때
+
+- background-position
+> 적용한 backgroud 이미지의 위치를 어디에 둘지 결정하고자 할 때
+
+- background-attachment :
+> 스크롤이 이동되더라도 해당 이미지를 특정위치에 고정시키고 싶을때
+ 
+- background-repeat
+> no-repeat 
+> 삽입된 이미지는 기본적으로 repeat 속성을 가지고 있지만, 만약 이 속성
+을 사용하고 싶지 않은 경우에 사용 !!
+
+11) position 속성 ***** 매우매우중요 !!
+- static (*순차적인) : 기본적으로 html 문서를 통해서 tag를 사용하면
+기본적으로 positon 속성값이 static 값이(default)라 사용잘안함 
+기본이 static 속성
+
+- relative (*상대적인) : 순차적으로 입.출력된 아이템 요소들 사이에서
+상대적인 위취 좌표값을 가지고 싶을 때
+
+- absolute (*절대적인) : 기존에 작성된 태그들과 다른차원으로 넘어가기
+때문에 위치 자표값을 절대적으로 사용!!
+(*부모요소들 중에 누군가가 relative 속성을 가지고 있다면 , 해당
+부모를 기준으로 절대위치 좌표값을 적용)
+
+- fixed (*고정된) : 설정한 포지션 위치값에 고정으로 붙어있는 경우
+
+- sticky (*달라붙는) : 스티커 = > 특정 좌표값에서 스티커처럼 붙어있도록
+하고자 할 때 
+
+- z-index : 3차원 공간에 대한 위치 정의 !!!!!
+x , y 축 / x, y, z 축
+> 크면 클수록 모니터를 기준으로 앞으로 튀어나오는 위치 좌표
+> 작으면 작을수록 모니터를 기준으로 뒤로 들어가는 위치 좌표
+
+10) float 속성 : 예전에 참 많이 사용하던 속성 / 
+- float : 부유하다
+- 웹 뉴스 기사 컨텐츠 출력
+- 좌 기사 이미지
+-우 기사 내용
+> 레이아웃 정렬 이슈 = >  float /  목적
+> 레이아웃 정렬 전문 문법 = > flex & grid
 
 11) shadow 속성
+> (*x축으로 / y축으로 / 그림자선명/흐림 / 그림자색상)
 
-12) gradient 속성
+- text-shadow : 텍스트(글자)에 그림자를 부여하는 속성
+
+- box-shadow : 아이템박스에 그림자를 부여하는 속성
+
+
+12) gradient 속성 
+- linear - gradient( ) : 선형
+-radial - gradient( ) :  원형

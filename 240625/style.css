@@ -18,11 +18,10 @@ a {
 
 /* variable */
 :root {
-  --main-gray-color: #fff;
+  --main-gray-color: #d1d1d1;
 }
 
 #container {
-  background-color: #d50527;
   width: 100%;
   position: relative;
 }
@@ -53,14 +52,12 @@ a {
 }
 
 #logo img {
-  display: flex;
-  margin-bottom: 15px;
-  width: 150px;
-  height: 60px;
+  width: 24px;
+  height: 24px;
 }
 
 .category_title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   padding-bottom: 4px;
 }
@@ -203,9 +200,6 @@ a {
 
 #top_lnb ul li a {
   font-size: 26px;
-  &:hover {
-    color: #e70017;
-  }
 }
 
 /* top_contents */
@@ -225,7 +219,7 @@ a {
 .top_contents_desc {
   font-size: 18px;
   width: 600px;
-  color: #dfdf;
+  color: #d1d1d1;
 }
 
 /* card_items */
@@ -235,46 +229,6 @@ a {
   justify-content: center;
   gap: 10px;
   position: absolute;
-  bottom: 370px;
+  bottom: 0;
   transform: translateY(100px);
-}
-
-/* slide */
-.slide_wrapper {
-  width: 660px;
-  height: 200px;
-  top: 20px;
-  overflow: hidden;
-  position: relative;
-  margin-left: 650px;
-  /* border: 1px solid #f00; */
-  .slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    &.animated {
-      transition: all 0.5s ease-out;
-    }
-    li {
-      width: 200px;
-      height: 200px;
-      background-color: #ccc;
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
-  }
-}
-
-.controls {
-  margin-top: 50px;
-  text-align: center;
-  span {
-    background-color: #333;
-    color: #fff;
-    margin: 0 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
 }
