@@ -23,42 +23,78 @@
     />
   </head>
   <body>
-    <header id="main_header">
-      <div id="owen_title">
-        <h1>Owen's About</h1>
-      </div>
-      <nav id="main_gnb">
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Project</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Code</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="dashborad_content">
-      <section id="dashborad_section">
-        <img id="dashborad_img" src="./img/Frame 57.png" alt="profileimg" />
-        <div class="dashborad_text">
-          <span class="text"></span>
-          <span class="blink"></span>
+    <main class="owen_app">
+      <header id="main_header">
+        <div id="owen_title">
+          <h1>Owen's About</h1>
         </div>
-      </section>
-    </main>
-    <main id="about_content">
-      <section id="about_title">
-        <h1>About me</h1>
-        <div class="test">
-          <img src="./img/Frame 57.png" alt="aboutimg" />
-          <div class="about_desc">
-            <span>구현가능한 언어는 아직 HTML,CSS,JS 언어만 구현가능하며 </span>
-            <span class="about-text_highlight"
-              >추후 React.js, Node.js 다양한언어를</span
-            >
-            <span>구현할 수 있는 풀스텍 개발자가 되는것이 목표입니다.</span>
+        <nav id="main_gnb">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Code</a></li>
+          </ul>
+        </nav>
+        <div class="bar-bg">
+          <span class="bar-ing"></span>
+        </div>
+      </header>
+      <main id="dashborad_content">
+        <section id="dashborad_section">
+          <img id="dashborad_img" src="./img/Frame 57.png" alt="profileimg" />
+          <div class="dashborad_text">
+            <span class="text"></span>
+            <span class="blink"></span>
+          </div>
+        </section>
+      </main>
+      <section class="section-about">
+        <a name="about"></a>
+        <h2>About Me</h2>
+        <div class="cont-about">
+          <div class="slide-container">
+            <div class="slide-album">
+              <div class="slide-images">
+                <img src="src/img/img-me-1.jpg" alt="owen1" />
+                <img src="src/img/img-me-2.jpg" alt="owen2" />
+                <img src="src/img/img-me-3.jpg" alt="owen3" />
+                <img src="src/img/img-me-4.jpg" alt="owen4" />
+                <img src="src/img/img-me-5.jpg" alt="owen5" />
+              </div>
+              <button class="btn-next">▶</button>
+              <button class="btn-prev">◀</button>
+            </div>
+          </div>
+          <div class="info_about">
+            <div class="info_text">
+              <p>
+                아직 구현가능한 언어는 HTML/CSS/JS 언어만 구현가능하지만,<br />
+                추후 React.js,Node.js,Vue.js 등 다양한 언어를<br />
+                구현하는 풀스텍 개발자가 목표입니다.
+              </p>
+              <p>제</p>
+            </div>
+            <div class="btn-about">
+              <button class="btn-open" type="button">
+                <img src="src/img/icon-diary.png" alt="" />HOBBY
+              </button>
+              <button class="btn-open" type="button">
+                <img src="src/img/icon-heart.png" alt="" />MBTI
+              </button>
+            </div>
           </div>
         </div>
       </section>
+      <section class="section_project">
+        <a name="project"></a>
+        <h2>Project & Skill</h2>
+        <h3>Chef's Studio</h3>
+        <img src="./img/Frame 57.png" alt="projectimg" />
+        <h2>구독형 요리 소개 카테고리 웹페이지</h2>
+        <!-- 이미지 3개 삽입 -->
+      </section>
+      <section class="CONTACT"></section>
     </main>
   </body>
 </html>

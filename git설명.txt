@@ -1,0 +1,96 @@
+git : 버전 관리 시스템 / 형상기억 관리
+
+1) 여러 사람들이 하나의 개발 프로젝트 A / B 서로
+효율적 공유 및 협업 목적
+2) 시간 & 차원에 구분없이 작업한 데이터를 관리
+3) IT git 필수!!!
+
+2. git-bash : git을 사용할 수 있도록 해주는 터미널
+(*터미널 = > 운영 시스템 영역)
+https://git-scm.com/downloads
+
+3. git 설치 확인 : cmd (*명령프롬프트) 
+- MAC (터미널)  git-bash가 최신버전이여야 확인가능 
+- git -v
+
+4. git 소유주 정보 확인
+- git config --list
+
+5. git 소유주 정보 삭제 및 재입력
+- git config --global --unset credential.helper
+- git config --global --unset user.name
+- git config --global --unset user.email
+
+* 지역 요소 삭제 : 굳이 관리자 권한 실행 x
+- git config --local--unset credential.helper
+- git config --local --unset user.name
+- git config --local --unset user.email
+
+*재입력
+- git config --global --user.name "내깃허브이름"
+- git config --global --user.email "내깃허브이메일"
+- git config --list
+
+* 위와 같이 했음에도 불구하고 제대로 소유주 변경 x
+제어판 >  자격증명 관리자 > windows  자격 증명  >
+기존 주소 제거후 내껄로 변경
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+로컬 컴퓨터 git 세팅 - > 협업목적 원격 저장소 보관.관리
+> git-hub
+
+루트 폴더 생성 > code로 열기 !!!
+
+vscode > 터미널을 오픈 (*ctrl + `)
+
+1) git 초기화
+- git init
+
+2) 나의 로컬  git & 원격 git-hub
+- git remote add origin : 나의 깃허브 주소
+-git remote -v (*확인하는명령어)
+
+3) staging area 데이터 이동
+- git add . 
+= >  현재 나의 루트 폴더 안에 모든 데이터를 staging area
+
+- git add " 파일명 || 폴더명 "  = > 루트 폴더 안에 해당 파일 혹은 폴더만 commit 
+
+4) 정상적으로 taging area 데이터 이동 여부 확인
+- git status
+
+5) commit 을 하기전, commit 하고자하는 데이터가 어떤 이름으로 되어있는지를 기록 / 지난과거에 저장해놓았던 데이터를 나중에 찾아올 수 있기 때문
+- git commit -m "240705"
+
+6) 그동안 commit 데이터에 대한 목록을 보여주는 명령어
+- gir log
+
+7) 원격저장소 commit
+- git push origin "브랜치명" main / master
+
+8) 학원에서 git push /
+
+9) 원격 저장소 저장 내려받는 방법
+- git pull origin "브랜치명"
+
+10) 원격 저장소 1개 (*레포지토리) = > 로컬 git (*학원 || 집)
+- 학원 push / 집 push
+- 반드시 항상 제발 git pull origin " 브랜치명 "
+
+11) 학원로컬 / 집로컬 = > 상관x
+=> histories
+= > git pull add origin "브랜치명"  --allow-related-histories
+
+12) 특정 브랜치 생성
+git checkout -b "생성하고싶은 브랜치명"
+
+13) git checkout master
+
+14) git-hub 커밋을 잘못한 경우!!!
+-  로컬 컴퓨터 터미널 : 
+git reset HEAD^ :  가장 최근 commit 한 데이터를 삭제
+
+-로컬 컴퓨터 터미널 git push -f origin "브랜치명"
+(*깃허브 브랜치에서 삭제가 됨)
+
