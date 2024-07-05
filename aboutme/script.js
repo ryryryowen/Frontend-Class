@@ -8,7 +8,6 @@ const cursor = document.querySelector(".blink");
 let i = 0;
 
 const typing = () => {
-
   if (i < content.length) {
     let txt = content[i++];
     text.innerHTML += txt === "\n" ? "<br/>" : txt;
@@ -21,9 +20,6 @@ const typing = () => {
 
 typing();
 
-
-
-
 //  Navbar Toggle Btn
 const toggleBtn = document.querySelector(".navbar_toogleBtn");
 const menu = document.querySelector(".navbar_menu");
@@ -33,4 +29,3 @@ toggleBtn.addEventListener("click", () => {
   menu.classList.toggle("active");
   code.classList.toggle("active");
 });
-
