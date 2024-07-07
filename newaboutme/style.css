@@ -14,13 +14,14 @@ body {
 
 /* 스크롤 */
 .bar-bg {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 5px;
   bottom: 0;
   left: 0;
   background-color: #dfe2f7;
 }
+
 .bar-ing {
   position: absolute;
   height: 5px;
@@ -31,35 +32,29 @@ body {
 
 /* header */
 #main_header {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   height: 80px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
-  border: 1px solid #f00;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 #main_header #owen_title {
-  position: absolute;
-  left: 40px;
-  top: 20px;
   font-family: "Abel", sans-serif;
-}
-
-#main_header #main_gnb {
-  position: absolute;
-  right: 100px;
-  top: 30px;
 }
 
 #main_header #main_gnb ul {
   display: flex;
+  gap: 15px;
 }
 
 #main_header #main_gnb a {
-  display: inline-block;
-  padding: 2px 10px;
-  border: 1px solid transparent;
+  padding: 5px 10px;
   transition: all 0.3s;
 }
 
@@ -72,142 +67,264 @@ body {
 #dashborad_content {
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
   height: 600px;
+  padding: 20px;
   margin: 0 auto;
-  position: relative;
-  border: 1px solid #f00;
 }
 
 #dashborad_section {
   display: flex;
   align-items: center;
-  padding: 50px;
   gap: 20px;
 }
 
 #dashborad_img {
   width: 350px;
-  margin-right: 20px; /* 이미지와 텍스트 사이에 간격을 추가합니다 */
+  margin-right: 20px;
 }
 
 .dashborad_text {
-  right: 50px;
   text-align: center;
   font-size: 35px;
-  flex: 1; /* 남은 공간을 차지하도록 설정합니다 */
+  flex: 1;
 }
+
 /* about */
 .section-about {
   width: 100%;
-
-  left: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: white;
-  padding: 80px 0 140px 0;
-  margin: 0 0 140px 0;
-  border: 1px solid #f00;
+  padding: 80px 20px;
+  margin: 20px;
 }
+
 .section-about h2 {
-  margin: 0 auto 100px;
-  display: inline-block;
   font-family: "Abel", sans-serif;
   color: #1a56f0;
   font-size: 40px;
+  margin-bottom: 40px;
 }
+
 .cont-about {
   display: flex;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 960px;
+  width: 100%;
 }
+
 .slide-container {
-  width: 438px;
-  margin: 0 auto;
+  flex: 1;
+  max-width: 438px;
 }
+
 .slide-album {
   position: relative;
-  width: 438px;
+  width: 100%;
   height: 438px;
   overflow: hidden;
   border-radius: 20px;
 }
+
 .slide-images {
-  position: relative;
   display: flex;
-  height: 438px;
+  transition: transform 0.5s ease-out;
 }
+
 .slide-images img {
-  width: 438px;
-  height: 438px;
+  width: 100%;
+  height: 100%;
 }
+
 .btn-next,
-.btn-next:active,
-.btn-next:focus {
+.btn-prev {
   position: absolute;
-  padding: 8px 8px 7px 14px;
+  padding: 8px;
   background-color: #1a56f0;
   color: white;
   border: none;
   font-size: 18px;
-  border-radius: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.btn-prev,
-.btn-prev:active,
-.btn-prev:focus {
-  position: absolute;
-  padding: 8px 14px 7px 8px;
-  background-color: #1a56f0;
-  color: white;
-  border: none;
-  font-size: 20px;
-  border-radius: 100%;
+
+.btn-next {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.btn-next:disabled,
-.btn-prev:disabled {
-  background-color: lightgray;
+
+.btn-prev {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .btn-next:hover,
 .btn-prev:hover {
-  cursor: pointer;
   background-color: white;
   color: #1a56f0;
-  transition: 0.7s ease-out;
 }
-.btn-prev {
-  left: 18px;
-  top: 50%;
+
+.info_about {
+  flex: 1;
+  max-width: 480px;
 }
-.btn-next {
-  right: 18px;
-  top: 50%;
-}
+
 .info_text {
   font-size: 20px;
 }
+
 .btn-about {
-  margin: 45px 0 0 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  left: 20px;
+  .btn-open {
+    display: inline-block;
+  }
 }
+
 .btn-about button {
   width: 140px;
   height: 60px;
-  margin: 0 45px 0 0;
   border-radius: 40px;
   background-color: #1a56f0;
   border: none;
   color: white;
   font-size: 18px;
-}
-.btn-about button:hover {
-  cursor: pointer;
-  background-color: #c4c8f1;
-  color: #1a56f0;
-  /* border: 2px solid #6a75ca; */
-  transition: 0.5s ease-out;
-}
-.btn-about button img {
-  width: 43px;
-  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
 }
 
-/*  */
+.btn-about button:hover {
+  background-color: #c4c8f1;
+  color: #1a56f0;
+}
+
+.btn-about button img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* project */
+.section_project {
+  width: 100%;
+  text-align: center;
+  padding: 100px 20px;
+  border: 1px solid #f00;
+}
+
+.project_title {
+  margin-bottom: 40px;
+}
+
+.section_project h2 {
+  font-family: "Abel", sans-serif;
+  font-size: 40px;
+  color: #1a56f0;
+}
+
+.project_container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.slide_wrapper {
+  width: 660px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #1a56f0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+.slides li {
+  min-width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin-right: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  margin-top: 20px;
+  position: absolute;
+  top: 200px;
+}
+
+.controls span {
+  background-color: #333;
+  color: #fff;
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.controls .prev,
+.controls .next {
+  display: inline-block;
+  background-color: #1a56f0;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls .prev:hover,
+.controls .next:hover {
+  background-color: white;
+  color: #1a56f0;
+}
+
+/* footer */
+#footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+#footer h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.box-footer {
+  width: 100%;
+}
+
+.link-sns ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link-sns li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.img-github {
+  width: 40px;
+}
+
+p {
+  margin-top: 20px;
+  color: #333;
+}
