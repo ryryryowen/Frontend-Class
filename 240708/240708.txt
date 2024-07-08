@@ -1,0 +1,106 @@
+*자바스크립트 기본 개념 단위: 변수 !!!
+변수 = > 값을 담는 그릇
+선언 / 생성 = > 전역변수 (*global) / 지역변수 (*local) 
+
+0~1 미만의 실수값 (소수점)을 난수 형태로 랜덤 생성
+
+
+Figma
+> autolayout
+> layout grid
+> wireframe
+> component / instance
+> prototype
+
+html5
+>  태그 
+>  공간분할태그 ( 인라인, 블록)
+> semantic (의미있는태그)
+
+css3 _v1
+> 선택자 13개 
+> 속성 13개
+
+Latout 
+> desktop Lofi wireframe
+> desktop Gifi wireframe
+
+css3_v2
+> transition (*전환 / 변형)
+= > css 에서 반응선택자를 사용할 때 주로 사용 !!
+= > 반응 전 / 후 => 상태변화 (*즉각 / 시차)
+= > 반응이 발생되기 전단계에서 속성값을 적용하는것이 원칙 !!
+
+1.transition-duration : 변형이 작동할 수 있는 기간 설정
+2.transition-delay : 반응선택자를 통해서 이벤트 실행 후 얼마 후에 변형 스타일을 적용할것인지 설정 
+3. transition-property: 변형 스타일을 적용할 요소를 무엇으로 설정
+4. transition-timing=funtion : 가속 혹은 감속에 대한 영향을 줄 수 있는 함수 설정
+> linear : 가속, 감속 x
+>ease: 도입부분(in)은 조금 덜 완만하게 / 완료부분(out)에서는
+조금더 완만하게 / 중간영역에서 급격하게
+> ease-in : 도입부분 (in) 에서는 완만하게 시작 /
+ 완료부분 (*out) 에서는 급격하게 종료
+> ease-out :  도입부분(in)에서는 급격하게 시작 / 
+완료부분에서는 (out)에서는 완만하게 종료
+> ease-in-out : 도입부분(in)과 완료부분(out)에서는 완만하게/
+중간영역에서 급격하게 
+
+축약형
+font : style size / line-height family
+backhround : color, img , position/size , repeat
+transition : property duration timing-funtion delay
+
+> animation
+1) animation-duration : 얼마의 기간동안 애니메이션을 실행 
+2) animation-delay : 이벤트 발생 후 얼마 후 시점부터 애니메아션 실행
+3) animation-timing-funtion : 애니메이션 실행 시, 가,감속 어떻게 할 것
+4) animation-direction : 애니메이션 실행 방향 설정 (*기본 :좌 -> 우)
+5) animation-name : 해당 애니메이션 만의 고유한 이름 설정
+6) animation-iteration-count : 애니메이션을 얼만큼 반복하게 할 것인가?
+7) animation-play-state : 애니메이션에 일시정지 기능을 삽입 !!
+
+
+> transform (*변환) 
+
+*transition : 어떤 이미지 혹은 아이템 요소가 변환하는데 있어서 변형에 대한
+속성 값을 제어!!!!
+
+*transform : 어떤 이미지 혹은 아이템 요소의 형태 혹은 위치(*좌표) 등 
+자체를 변환시키기 위한 속성 / 좌표값 / 각도회전(웹좌표계) / 중심축으로부터 회전
+(* X축, Y축, Z축) 으로부터 회전 / 크기
+
+rotate(angle deg) : 회전각도
+scale(x, y) : 크기
+scaleX( ) : 크기
+scaleY( ) : 크기
+skew(x, y) : 특정 중심축을 기준으로 기울기
+skewX( ) : 특정 중심축을 기준으로 기울기
+skewY( ) : 특정 중심축을 기준으로 기울기
+translate( x, y) : 특정 크기만큼 이동
+translateX( ) : 특정 크기만큼 이동
+translateY( ) : 특정 크기만큼 이동
+
+=> 1개의 이미지 혹은 도형 요소에 복수의 transform 효과 적용!!!
+> 적용하는 순서에 따라서 결과값이 완전히 달라질 수 있음
+
+> 3D 공간 개념
+
+loading spinner
+
+Server Side Rendering
+
+= > Z축에 대한 공간감
+
+* 원근감 
+-webkit-perspecitive : 2000;
+perspective : 2000;
+
+*자식요서에서의 z축으로부터의 공간감을 적용시켜주기 위해서 부모요소
+
+css3_v3
+> Flexable / reponsive (*반응형)
+> flex / grid
+> media-query  = > device / break-point
+
+scss
+> mix-in / include

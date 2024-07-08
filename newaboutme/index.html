@@ -41,7 +41,6 @@
       </header>
       <main id="dashborad_content">
         <section id="dashborad_section">
-          <img id="dashborad_img" src="./img/Frame 57.png" alt="profileimg" />
           <div class="dashborad_text">
             <span class="text"></span>
             <span class="blink"></span>
@@ -70,36 +69,88 @@
                 구현가능하지만, 추후 React.js,Node.js,Vue.js 등<br />
                 다양한 언어를 구현하는 풀스텍 개발자가 목표입니다.
               </p>
-            </div>
-            <div class="btn-about">
-              <button class="btn-open" type="button">
-                <img src="src/img/icon-diary.png" alt="" />HOBBY
-              </button>
-              <button class="btn-open" type="button">
-                <img src="src/img/icon-heart.png" alt="" />MBTI
-              </button>
+              <button id="open">MBTI / HOBBY</button>
+              <section id="modal_box">
+                <article id="modal_contents">
+                  <h1>MY profile</h1>
+                  <span id="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </span>
+                  <article id="profile">
+                    <img src="./img/pf.png" alt="profile" />
+                    <ul id="desc">
+                      <li class="user">이름 : 해오름</li>
+                      <li class="user">MBTI : ISTP</li>
+                      <li class="user">HOBBY : DRIVE OR CAFE</li>
+                    </ul>
+                  </article>
+                </article>
+              </section>
             </div>
           </div>
         </div>
       </section>
-      <section class="section_project">
-        <div class="project_title">
-          <a name="project"></a>
-          <h2>Project</h2>
-        </div>
-        <article class="project_container">
-          <div class="slide_wrapper">
-            <ul class="slides">
-              <li>slide 01</li>
-              <li>slide 02</li>
-              <li>slide 03</li>
-              <li>slide 04</li>
-            </ul>
+      <section id="main">
+        <article class="main_text">
+          <h3 class="main_info">
+            지금 바로 내 주방에서<br />
+            세계 각지의 요리를 체험해보세요.
+          </h3>
+          <div class="main_desc">
+            <span>세계 각지의 요리 전문가와 함께 배우는 쿠킹 클래스를</span>
+            <span>지금 내 주방에서 영상으로 만나보세요.</span>
+            <span>실시간 질의응답으로 더 완벽한 요리를 만들 수 있어요.</span>
           </div>
-          <p class="controls">
-            <span class="prev">prev</span>
-            <span class="next">next</span>
-          </p>
+        </article>
+        <article class="main_slide">
+          <ul>
+            <li>
+              <div class="card_img first"></div>
+              <div class="card_info">
+                <h4 class="card_info_national">덴마크</h4>
+                <p class="card_info_desc">
+                  <span>건강한 유럽식 아침</span>
+                  <span>준비하기!</span>
+                </p>
+                <h2 class="card_info_price">1인 18,000원</h2>
+              </div>
+            </li>
+            <li class="active">
+              <div class="card_img second"></div>
+              <div class="card_info">
+                <h4 class="card_info_national">한국</h4>
+                <p class="card_info_desc">
+                  <span>제주도에서 온 달달한</span>
+                  <span>감귤 디저트</span>
+                </p>
+                <h2 class="card_info_price">1인 23,000원</h2>
+              </div>
+            </li>
+            <li>
+              <div class="card_img third"></div>
+              <div class="card_info">
+                <h4 class="card_info_national">미국</h4>
+                <p class="card_info_desc">
+                  <span>조용한 농가에서 만들어보는</span>
+                  <span>유기농 파스타</span>
+                </p>
+                <h2 class="card_info_price">1인 35,000원</h2>
+              </div>
+            </li>
+          </ul>
+          <div class="main_slide_arrow">
+            <span class="slide_arrow left">
+              <i class="fas fa-angle-left"></i>
+            </span>
+            <span class="slide_arrow right">
+              <i class="fas fa-angle-right"></i>
+            </span>
+          </div>
+          <div class="main_slide_pager">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
         </article>
       </section>
       <footer id="footer">
