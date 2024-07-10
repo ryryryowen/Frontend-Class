@@ -1,13 +1,7 @@
-// 로딩창
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    document.querySelectorAll(".loader").forEach(function (loader) {
-      loader.style.display = "none";
-    });
-    document.body.style.background = "white"; // 배경색 변경
-    document.getElementById("main-content").style.display = "block";
-  }, 2000); // 2초
-});
+// 맨 위로 이동 버튼
+let moveToTop = function () {
+  document.body.scrollIntoView({ behavior: "smooth" });
+};
 
 // typing dashborad
 const content =
@@ -65,4 +59,61 @@ close.addEventListener("click", () => {
 
 modalBox.addEventListener("click", function () {
   this.classList.remove("active");
+});
+
+// 슬라이드 이미지
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".main_slide ul li");
+  const leftArrow = document.querySelector(".slide_arrow.left");
+  const rightArrow = document.querySelector(".slide_arrow.right");
+  const pagers = document.querySelectorAll(".main_slide_pager span");
+
+  let currentIndex = 0;
+
+  // Function to show the slide
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+
+    pagers.forEach((pager, i) => {
+      if (i === index) {
+        pager.classList.add("active");
+      } else {
+        pager.classList.remove("active");
+      }
+    });
+  }
+
+  // Function to go to the next slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Function to go to the previous slide
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Add event listeners for arrows
+  leftArrow.addEventListener("click", prevSlide);
+  rightArrow.addEventListener("click", nextSlide);
+
+  // Add event listeners for pagers
+  pagers.forEach((pager, i) => {
+    pager.addEventListener("click", () => {
+      currentIndex = i;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Initial slide
+  showSlide(currentIndex);
 });

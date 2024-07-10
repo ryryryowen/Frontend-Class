@@ -21,9 +21,10 @@ body {
   position: fixed;
   width: 100%;
   height: 5px;
-  bottom: 0;
+  top: 0;
   left: 0;
   background-color: #dfe2f7;
+  z-index: 999;
 }
 
 .bar-ing {
@@ -318,12 +319,14 @@ body {
   display: flex;
   justify-content: center; /* 중앙 정렬 */
   gap: 20px; /* 카드 간격 추가 */
+  transition: all 0.3s ease-in-out;
 }
 
 .main_slide ul li {
   width: 240px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 }
 
 .main_slide ul li.active {
@@ -340,7 +343,7 @@ body {
 }
 
 .card_img.first {
-  background: url(./img/encar1.png) no-repeat center center/cover;
+  background: url(./img/maincraft.png) no-repeat center center/cover;
 }
 
 .card_img.second {
@@ -489,6 +492,24 @@ body {
 p {
   margin-top: 20px;
   color: #333;
+}
+
+/* moveTop 버튼 */
+.btn-moveTop {
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  width: 65px;
+  height: 65px;
+  background-image: url(./img/btn-moveTop.png);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 998;
+}
+.btn-moveTop:hover {
+  background-image: url(./img/btn-moveTop-hover.png);
+  transition: 0.5s ease-out;
 }
 
 /* Mobile */
