@@ -90,7 +90,7 @@ body {
 }
 
 .dashborad_text {
-  font-size: 35px;
+  font-size: 40px;
   flex: 1;
 }
 
@@ -374,6 +374,10 @@ body {
   border-bottom: 1px solid #000;
 }
 
+.main_slide {
+  width: 100%;
+}
+
 .main_slide_arrow {
   z-index: 3;
   position: absolute;
@@ -485,4 +489,159 @@ body {
 p {
   margin-top: 20px;
   color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* body */
+  body {
+    padding: 0 10px;
+  }
+
+  /* header */
+  #main_header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  #main_header #owen_title {
+    margin-bottom: 10px;
+  }
+
+  #main_header #main_gnb ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #main_header #main_gnb a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* dashboard */
+  #dashborad_content {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .dashborad_text {
+    font-size: 24px;
+  }
+
+  /* about */
+  .section_about {
+    padding: 40px 10px;
+    margin: 30px auto;
+  }
+
+  .section_about h2 {
+    font-size: 30px;
+  }
+
+  .info_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .content > h1 {
+    font-size: 24px;
+  }
+
+  .content > p {
+    font-size: 16px;
+  }
+
+  .info_about {
+    width: 100%;
+  }
+
+  .info_text {
+    font-size: 20px;
+  }
+
+  /* modalbutton */
+  #open {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* main */
+  #main {
+    padding: 20px 10px;
+  }
+
+  .main_title {
+    font-size: 24px;
+  }
+
+  .main_text {
+    width: 100%;
+    max-width: none;
+  }
+
+  .main_info {
+    font-size: 20px;
+  }
+
+  .main_desc {
+    font-size: 16px;
+  }
+
+  .main_slide {
+    width: 100%;
+  }
+
+  .main_slide ul {
+    flex-direction: column;
+  }
+
+  .main_slide ul li {
+    width: 240px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .card_img {
+    width: 240px;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card_info {
+    padding: 10px;
+  }
+
+  .card_info_national {
+    font-size: 16px;
+  }
+
+  .card_info_desc {
+    font-size: 14px;
+  }
+
+  .main_slide_arrow {
+    display: none;
+  }
+
+  .main_slide_pager {
+    display: none;
+  }
+
+  /* footer */
+  #footer {
+    padding: 20px 10px;
+  }
+
+  #footer h2 {
+    font-size: 30px;
+  }
 }
