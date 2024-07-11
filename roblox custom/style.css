@@ -64,8 +64,11 @@ a {
 #logon {
   width: 463px;
   height: 650px;
-  background: url("./img/middle.png") center/cover no-repeat;
-  opacity: 0.9;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./img/middle.png") center/cover no-repeat;
   margin: 0 auto 50px;
   padding: 20px;
   border-radius: 10px;
@@ -79,6 +82,10 @@ a {
 .inner_contents {
   color: #000;
   font-size: 14px;
+}
+
+.MC_Hero_FullBleedA_Content_Logo {
+  width: 400px;
 }
 
 .title {
@@ -172,7 +179,7 @@ footer {
   justify-content: center;
   align-items: center;
   h3 {
-    color: #000;
+    color: #fff;
   }
   #items {
     display: flex;
