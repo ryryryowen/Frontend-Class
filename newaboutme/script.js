@@ -11,15 +11,32 @@ const text = document.querySelector(".text");
 const cursor = document.querySelector(".blink");
 
 let i = 0;
+let isTyping = true;
 
 const typing = () => {
-  if (i < content.length) {
+  if (i < content.length && isTyping) {
     let txt = content[i++];
     text.innerHTML += txt === "\n" ? "<br/>" : txt;
-    setTimeout(typing, 250);
+    setTimeout(typing, 150);
   } else {
-    cursor.style.animation = "none";
-    cursor.style.display = "none";
+    isTyping = false;
+    setTimeout(deleteText, 1000);
+  }
+};
+
+const deleteText = () => {
+  let textContent = text.innerHTML;
+  let length = textContent.length;
+
+  if (!isTyping) {
+    if (length > 0) {
+      text.innerHTML = textContent.slice(0, -1);
+      setTimeout(deleteText, 50);
+    } else {
+      isTyping = true;
+      i = 0;
+      setTimeout(typing, 200);
+    }
   }
 };
 
