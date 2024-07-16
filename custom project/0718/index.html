@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Showcase</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <main id="container">
+      <h1><span>Auto Gallery</span> Car Showcase</h1>
+
+      <div class="pic">
+        <img
+          class="active"
+          data-alt="tab1"
+          src="./img/car-01.jpg"
+          alt="car01"
+        />
+        <img data-alt="tab2" src="./img/car-02.jpg" alt="car02" />
+        <img data-alt="tab3" src="./img/car-03.jpg" alt="car03" />
+        <img data-alt="tab4" src="./img/car-04.jpg" alt="car04" />
+      </div>
+
+      <div class="desc">
+        <div id="tab1" class="content active">
+          <p>
+            The latest model from our luxury series, combining comfort and
+            performance.
+          </p>
+          <h2>Model S, Electric Sedan</h2>
+        </div>
+        <div id="tab2" class="content">
+          <p>A robust SUV designed for both urban and off-road adventures.</p>
+          <h2>Model X, Sport Utility Vehicle</h2>
+        </div>
+        <div id="tab3" class="content">
+          <p>
+            Our compact car offers efficiency and modern design for city
+            driving.
+          </p>
+          <h2>Model 3, Compact Car</h2>
+        </div>
+        <div id="tab4" class="content">
+          <p>
+            Experience unmatched performance with our high-speed sports car.
+          </p>
+          <h2>Model Z, Sports Car</h2>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
