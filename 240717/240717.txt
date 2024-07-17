@@ -1,0 +1,79 @@
+bootstrap > 프레임워크
+= > html , css = > 레이아웃 구조 !!!
+= > 절대로 html , css , js 포폴
+
+* react.js + bootstrap 
+
+* jQuery  / Slick Slider  = > 라이브러리
+= > 공통적으로 사용하는 웹표준 문법을 기반으로 그위에 각자의 라이브러리의 고유한 특성을 가지고 있는 문법을 더할 뿐
+= > React.js 
+
+
+* bootstrap = > 프레임워크
+= > 천지창조  // 완전한 독자적인 문법 체계 및 질서
+= > vue.js  // Angluar.js 
+
+12개의 컬럼으로 나눈다 
+> 10과 가까운 숫자가운데서 최대공약수가 가장 많은 숫자 : 12
+
+*Grid는 flex와 정말 중요하게 많이 사용되는
+ 레이아웃 시스템 중 하나 !!
+
+grid  <  flex    = flex 가 더많이 사용
+> 사용되는 용어가 비슷함 
+
+grid : 명호가하게 행 . 열이 정해진 상황에서 사용 !!
+ > 행 . 열 에 대한 정렬이 완전 깨짐 !!
+
+flex의 경우 , 부모요소 d:f 적용하는 순간   = >  자식요소들은 flex 박스에 영향을
+받음 !!!
+
+부모   d:g 
+
+
+displat : grid
+gird-template-colums : 열을 몇 개 
+gird-template-rows : 행을 몇 개
+ > grid : 행 몇 개 / 열 몇 개
+
+grid-row-gap :  행 사이의 간격
+grid-column-gap : 열 사이의 간격
+ > grid-gap : 행 간격 / 열간격
+
+justify-items : 이미 여러개 열을 나눠진 각 자식 요소의
+아이템들의 수평 정렬 세팅
+> start / center / end / stretch
+
+align-items : 이미 여러개 열을 나눠진 각 자식 요소의
+아이템들의 수직 정렬 세팅
+> start / center / end / stretch
+
+justify-content : 이미 여러개 열로 나눠진 각 자식 요소를 하나의 컨텐츠로 인식
+> start  / center  / end
+>  space-between
+> space-evenly
+
+justify-content : 부모가 아닌 자식요소에 적용할 수 있는 grid
+
+
+1fr  /  auto 
+=   >   평소에는 거의 동일한 개념으로 사용
+=  >  column  /  row 를 나누고자 할 때 1/n 
+
+* 각각의 개별 아이템을 하나로 묶어서 content로 사용하고자 할 때, 차이점 !!
+auto의 경우, 개별 아이템에 원래 정용되어있던 너비값을 식별해서 사용!!!
+1fr 의 경우, 개별 아이템의 너비보다 부모요소의 전체너비중 1/n 값을 우선 적용 !!!
+
+align-content : 각 개별 아이템들은 하나의 content로 식별해서 수직 정렬을 
+주고 할 때 사용 ( start /  center / end / strech)
+
+--------------------------------------------------------------
+
+그리드 레이아웃 시스템 정렬 기준 : 라인 카운트 !!!
+> 자식여서 !!! 라인 카운트
+
+열을 기준으로 병합하고자 할 때,
+grid-column-start : 열이 시작될 라인 넘버
+grid-column-end : 열이 끝날 무렵의 라인 넘버
+> grid-column : 시작 라인 넘버 /종료 라인 넘버
+> grid-column : 시작 라인 넘버 / span 공간수
