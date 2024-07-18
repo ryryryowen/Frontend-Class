@@ -31,7 +31,7 @@ flex의 경우 , 부모요소 d:f 적용하는 순간   = >  자식요소들은 
 부모   d:g 
 
 
-displat : grid
+display : grid
 gird-template-colums : 열을 몇 개 
 gird-template-rows : 행을 몇 개
  > grid : 행 몇 개 / 열 몇 개
@@ -77,3 +77,40 @@ grid-column-start : 열이 시작될 라인 넘버
 grid-column-end : 열이 끝날 무렵의 라인 넘버
 > grid-column : 시작 라인 넘버 /종료 라인 넘버
 > grid-column : 시작 라인 넘버 / span 공간수
+
+grid-area : 시작하는 행 라인 / 시작하는 열 라인 / 종료하는 행 라인/ 종료하는 열 라인
+(*최종 완료된 박스 구조를 기준으로 라인을 찾아서 설정)
+
+grid-row :  각 아이템 행의 위치를 재정렬 가능 (*행 중심으로 위치 변경하고자할때)
+
+order :  각 아이템의 순서 및 위치를 재정렬 가능 (*행에 국한되지 않고, 위치 변경할때)
+
+justify-contents
+
+justify-items
+
+> justify  : 수평 / 가로 암시 & 의미
+
+>  content : 묵여있는 그룹
+
+>  item :  개별적인 요소
+
+display : flex
+justyfy-content : center
+
+> 자식요소는 무조건 반드시 부모요소의 플렉스박스 안에서 영향을 
+받을 수 밖에 없는 하나의 그룹
+
+display : grid 
+grid-template-column : repeat(3, 1fr)
+justify-items: center
+justify-contens : center
+grid-template-row
+
+
+
+
+
+
+
+
