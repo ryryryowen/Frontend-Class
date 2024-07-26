@@ -1,0 +1,27 @@
+카카오맵 API
+
+*네이버(비용발생함)  //  카카오  //  구글
+
+API 
+* Application Programming interface
+
+* 데이터 통신
+- 일기예보
+- 버스정류장
+- 카카오맵
+
+*apis.map.kakao.com
+< kakao map API > JS
+791f53849d684d7b23e03ad13170eb42 
+
+1. 라이브서버 : 
+- 설정 
+- live sever config
+- settings : host
+- 127.0.0.1
+- settings :Use Local Ip 해제
+
+
+* vscode를 열기 할 때마다, port 변경 !!
+
+> 
