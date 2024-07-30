@@ -39,16 +39,16 @@
 
 // console.log(typeof srt1);
 
-const num = 1000;
-const str = "원";
+// const num = 1000;
+// const str = "원";
 
-const counter = num + str;
-console.log(typeof counter);
+// const counter = num + str;
+// console.log(typeof counter);
 
-const num1 = 1000;
-const str1 = "2000";
+// const num1 = 1000;
+// const str1 = "2000";
 
-const counter1 = num1 + str1;
-console.log(counter1);
+// const counter1 = num1 + str1;
+// console.log(counter1);
 
-prompt("얼마를 원하십니까?");
+// prompt("얼마를 원하십니까?");
