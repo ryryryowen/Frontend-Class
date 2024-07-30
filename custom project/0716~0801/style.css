@@ -83,14 +83,17 @@ header {
   display: flex;
   align-items: center;
   .heading {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
     text-align: center;
     color: #fff;
     h1 {
-      font-size: 70px;
+      font-size: 50px;
       margin-bottom: 40px;
     }
     p {
-      font-size: 22px;
+      font-size: 18px;
       line-height: 1.5rem;
       padding: 0 150px;
     }
@@ -126,7 +129,7 @@ header {
       flex: 2;
       img {
         width: 100%;
-        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+        border-radius: 80% 80% 85% 85% / 80% 85% 85% 80%;
       }
     }
   }
@@ -260,11 +263,11 @@ button.slick-arrow {
   position: relative;
   &::before {
     content: "";
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       rgba(160, 8, 160, 0.5),
       rgba(6, 87, 24, 0.8)
-    );
+    ); */
     width: 100%;
     height: 100%;
     position: absolute;
