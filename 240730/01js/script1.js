@@ -5,6 +5,6 @@
 
 const fah = parseFloat(prompt("화씨온도를 입력하세요!", "ex. 45"));
 
-const cel = (80(fah - 32) / 1.8).toFixed(2);
+const cel = ((fah - 32) / 1.8).toFixed(2);
 
 alert(`화씨온도 ${fah}도는 섭씨온도 ${cel}도 입니다!`);
