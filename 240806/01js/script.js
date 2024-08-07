@@ -1,24 +1,33 @@
-// const overout = document.querySelectorAll(".overout");
-// let i = 0;
+// mouserover & mouseout
+let o = 0;
 
-// overout.forEach((item, index) => {
-//   if (index === 0) {
-//     item.addEventListener("mouseover", function () {
-//       this.querySelector("p:first-of-type").innerText = "moseover";
-//       this.querySelector("p:last-of-type").innerText = ++i;
-//     });
-//     item.addEventListener("mouseout", function () {
-//       this.querySelector("p:first-of-type").innerText = "mouseover";
-//     });
-//   }
+const overoutOut = document.querySelector("div.out.overout");
+overoutOut.addEventListener("mouseover", function () {
+  const pItems = this.querySelectorAll("p");
+  pItems[0].innerText = "mouseover";
+  pItems[3].innerText = ++o;
+});
 
-//   if (index === 1) {
-//     item.addEventListener("mouseover", function () {
-//       this.querySelector("p:first-of-type").innerText = "moseover";
-//       this.querySelector("p:last-of-type").innerText = ++i;
-//     });
-//     item.addEventListener("mouseout", function () {
-//       this.querySelector("p:first-of-type").innerText = "mouseover";
-//     });
-//   }
-// });
+const overoutIn = document.querySelector("div.in.overout");
+overoutIn.addEventListener("mouseover", function () {
+  const pItems = this.querySelectorAll("p");
+  pItems[0].innerText = "mouseover";
+  pItems[1].innerText = ++o;
+});
+
+// mouseenter & mouseleave
+let e = 0;
+
+const enterleaveOut = document.querySelector("div.out.enterleave");
+enterleaveOut.addEventListener("mouseenter", function () {
+  const pItems = this.querySelectorAll("p");
+  pItems[0].innerText = "mouseenter";
+  pItems[3].innerText = ++e;
+});
+
+const enterleaveIn = document.querySelector("div.in.enterleave");
+enterleaveIn.addEventListener("mouseenter", function () {
+  const pItems = this.querySelectorAll("p");
+  pItems[0].innerText = "mouseenter";
+  pItems[1].innerText = ++e;
+});
