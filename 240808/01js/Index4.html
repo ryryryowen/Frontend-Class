@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style4.css" />
+    <script defer src="./script4.js"></script>
+  </head>
+  <body>
+    <main id="container">
+      <h1>😎 부트캠프 참가자 명단</h1>
+      <form action="http://127.0.0.1:5500" method="get">
+        <ul id="bootcampInfo">
+          <li>
+            <label for="name">이 름</label>
+            <input type="text" name="name" id="name" />
+          </li>
+          <li>
+            <label for="major">전 공</label>
+            <input type="text" name="major" id="major" />
+          </li>
+        </ul>
+        <input class="btn" type="submit" value="등록하기" />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>전공</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td></td>
+            <td></td>
+          </tr> -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
