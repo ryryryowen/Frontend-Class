@@ -18,25 +18,57 @@
 
 // 4_1. 조건에 따라서 값을 어떻게 출력 할것인가?
 
-// Word Game
-const gameStart = (e) => {
-  e.preventDefault();
-  let word = document.querySelector("#word").innerText;
-  let myword = document.querySelector("#myword").value;
-  let lastword = word[word.length - 1];
-  let firstword = myword[0];
-  if (lastword === firstword) {
-    document.querySelector("#result").innerText = "정답입니다!";
-    document.querySelector("#word").innerText = myword;
-    document.querySelector("#myword").value = "";
-  } else {
-    document.querySelector("#result").innerText = "틀렸습니다!";
-    document.querySelector("#myword").value = "";
-  }
-};
+const word = document.querySelector("#word");
+const mywordInput = document.querySelector("#myword");
+const form = document.querySelector(".word_text form");
+const resultMessage = document.querySelector("#result");
 
-const button = document.querySelector(".word_text form");
-button.addEventListener("submit", gameStart);
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let remainingAttempts = 10;
+
+word.innerText = "숫자 맞추기 게임: 1부터 100 사이의 숫자를 맞춰보세요!"; // 안내 문구로 변경
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const userGuess = parseInt(mywordInput.value); // 기존 input 필드를 활용하여 숫자를 입력받음
+
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+    resultMessage.textContent = "1부터 100 사이의 숫자를 입력하세요!";
+    return;
+  }
+
+  remainingAttempts--;
+
+  if (userGuess === randomNumber) {
+    resultMessage.textContent = "정답입니다! 축하합니다!";
+    mywordInput.disabled = true; // 입력 비활성화
+    form.innerHTML += `<button id="resetButton">게임 다시 시작</button>`; // 리셋 버튼 추가
+    document.getElementById("resetButton").addEventListener("click", resetGame);
+  } else if (userGuess < randomNumber) {
+    resultMessage.textContent = "더 높은 숫자를 입력해보세요.";
+  } else {
+    resultMessage.textContent = "더 낮은 숫자를 입력해보세요.";
+  }
+
+  word.innerText = `남은 기회: ${remainingAttempts}`;
+
+  if (remainingAttempts === 0 && userGuess !== randomNumber) {
+    resultMessage.textContent = `기회를 모두 사용했습니다. 정답은 ${randomNumber}였습니다.`;
+    mywordInput.disabled = true; // 입력 비활성화
+    form.innerHTML += `<button id="resetButton">게임 다시 시작</button>`; // 리셋 버튼 추가
+    document.getElementById("resetButton").addEventListener("click", resetGame);
+  }
+});
+
+function resetGame() {
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+  remainingAttempts = 10;
+  mywordInput.value = "";
+  resultMessage.textContent = "";
+  word.innerText = "숫자 맞추기 게임: 1부터 100 사이의 숫자를 맞춰보세요!";
+  mywordInput.disabled = false;
+  document.getElementById("resetButton").remove(); // 리셋 버튼 제거
+}
 
 // Lotto Game
 

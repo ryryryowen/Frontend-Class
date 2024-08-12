@@ -151,7 +151,7 @@ body {
 .wrapper > div:nth-child(2) {
   width: 100%;
   height: 158px;
-  background: url("./contents/bg_1.jpg") center -90px/cover no-repeat;
+  background: url("./contents/20230708212505_1903861_1200_735.jpg") center -90px/cover no-repeat;
 }
 .wrapper > div:nth-child(2)::before {
   content: "";
@@ -164,7 +164,7 @@ body {
 .wrapper > div:nth-child(3) {
   width: 100%;
   height: 158px;
-  background: url("./contents/bg_2.jpg") center -90px/cover no-repeat;
+  background: url("./contents/2024020118023374242_1.jpg") center/cover no-repeat;
 }
 .wrapper > div:nth-child(3)::before {
   content: "";

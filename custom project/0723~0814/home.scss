@@ -1,7 +1,7 @@
 /* reset */
 @import "./reset.scss";
 
-/* built-in-function */
+/* 색상 및 크기 변수 */
 $color: (
   bg-dark-color: #000,
   bg-gray-color: #808080,
@@ -10,37 +10,46 @@ $color: (
   theme-color: #55b2e4,
 );
 
-$size: 14px;
+$font-size: 14px;
+$border-radius: 15px;
 
-/* mixin */
-@mixin innerContents {
-  .contents_title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    .title {
-      color: map-get($color, theme-color);
-      font: bold 14px/1 "arial";
-    }
-    .subtitle {
-      font: normal 14px/1 "arial";
-    }
+/* mixins */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-style($bg, $border, $radius) {
+  background: $bg;
+  border: $border;
+  border-radius: $radius;
+}
+
+@mixin headerStyle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .title {
+    color: map-get($color, theme-color);
+    font: 600 16px/1 "Arial";
   }
-  .divideLine {
-    width: 100%;
-    border-top: 1px solid map-get($color, bg-gray-color);
-    margin: 4px 0;
+
+  .subtitle {
+    font: normal 14px/1 "Arial";
   }
 }
 
-/* common */
+/* 공통 스타일 */
 html,
 body {
   width: 100%;
   height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: $font-size;
 }
 
-/* home */
 .wrapper {
   width: 100%;
   height: 100%;
@@ -48,23 +57,41 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .wrapper_header {
     width: 100%;
     height: 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include innerContents;
+    @include headerStyle;
+
+    .divideLine {
+      width: 100%;
+      border-top: 1px solid map-get($color, bg-gray-color);
+      margin: 4px 0;
+    }
+
+    .contents_body {
+      color: map-get($color, bg-dark-color);
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
   }
+
   .wrapper_body {
     width: 100%;
     height: 270px;
-    @include innerContents;
+    @include headerStyle;
+
     .video {
       width: 100%;
       height: 240px;
-      background: url("./contents/iu_1.jpg") center/cover no-repeat;
+      background: url("./contents/htm_2016080484837486184.jpg") center/cover
+        no-repeat;
       margin-top: 10px;
+      border-radius: $border-radius;
     }
   }
 }

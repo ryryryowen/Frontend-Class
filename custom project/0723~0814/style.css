@@ -1,7 +1,7 @@
 /* reset */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -15,28 +15,38 @@ a {
   color: inherit;
 }
 
-/* built-in-function */
-/* common */
-.background {
+/* mixins */
+html,
+body {
   width: 100%;
-  height: 100vh;
-  background: url("./contents/bg_2.jpg");
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.background {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("./contents/2024020118023374242_1.jpg");
 }
-.background .outerbox {
+
+.outerbox {
   background: url("./contents/outerbox.png") center/cover no-repeat;
+  border: none;
+  border-radius: 15px;
   width: 808px;
   height: 544px;
   position: relative;
 }
-.background .outerbox .wrapper {
+
+.wrapper {
   display: flex;
   padding: 36px;
 }
 
-/* wrapper_left */
 .wrapper_left {
   width: 203px;
   height: 472px;
@@ -50,6 +60,7 @@ a {
   font-size: 14px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .wrapper_left .wrapper_left_header .zero {
   color: #dc143c;
@@ -60,6 +71,7 @@ a {
   gap: 20px;
   width: 100%;
   height: 100%;
+  background: #fff;
   border: 1px solid #808080;
   border-radius: 15px;
   padding: 26px;
@@ -73,7 +85,7 @@ a {
 .wrapper_left .wrapper_left_body .left_body_header .left_body_header_gray {
   width: 148px;
   height: 133px;
-  background: url("./contents/iu.jpg") center/cover no-repeat;
+  background: url("./contents/htm_2016080484837486184.jpg") center/cover no-repeat;
 }
 .wrapper_left .wrapper_left_body .left_body_header .left_body_header_line {
   border-top: 1px dotted #000;
@@ -81,8 +93,6 @@ a {
   width: 100%;
 }
 .wrapper_left .wrapper_left_body .left_body_profile {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -100,8 +110,11 @@ a {
 .wrapper_left .wrapper_left_body .left_body_footer .wrapper_feel .feel_title {
   font-weight: bold;
 }
+.wrapper_left .wrapper_left_body .left_body_footer .wrapper_feel select {
+  padding: 4px;
+  border-radius: 7.5px;
+}
 
-/* wrapper_right */
 .wrapper_right {
   width: 524px;
   height: 472px;
@@ -117,6 +130,7 @@ a {
 }
 .wrapper_right .wrapper_right_header .right_header_title {
   font-weight: bold;
+  font-size: 16.8px;
 }
 .wrapper_right .wrapper_right_header .right_header {
   font-size: 14px;
@@ -124,6 +138,7 @@ a {
 .wrapper_right .wrapper_right_body {
   width: 100%;
   height: 445px;
+  background: #fff;
   border: 1px solid #808080;
   border-radius: 7px;
   background: #fff;
@@ -135,7 +150,6 @@ a {
   border-radius: 7px;
 }
 
-/* navigation */
 .navigation {
   width: 70px;
   height: 110px;
@@ -157,4 +171,28 @@ a {
   font-size: 14px;
   border: 1px solid #000;
   cursor: pointer;
+}
+.navigation .navigation_item:hover {
+  background: #299edd;
+}
+
+@media (max-width: 768px) {
+  .outerbox {
+    width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .wrapper_left,
+  .wrapper_right {
+    width: 100%;
+    height: auto;
+  }
+  .navigation {
+    top: 10%;
+    right: 0;
+    width: 50px;
+  }
 }

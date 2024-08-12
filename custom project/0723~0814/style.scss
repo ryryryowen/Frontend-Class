@@ -1,7 +1,6 @@
 /* reset */
 @import "./reset.scss";
 
-/* built-in-function */
 $color: (
   bg-dark-color: #000,
   bg-gray-color: #808080,
@@ -10,29 +9,51 @@ $color: (
   theme-color: #55b2e4,
 );
 
-$size: 14px;
+$font-size: 14px;
+$border-radius: 15px;
 
-/* common */
-.background {
-  width: 100%;
-  height: 100vh;
-  background: url("./contents/bg_2.jpg");
+/* mixins */
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  .outerbox {
-    background: url("./contents/outerbox.png") center/cover no-repeat;
-    width: 808px;
-    height: 544px;
-    position: relative;
-    .wrapper {
-      display: flex;
-      padding: 36px;
-    }
-  }
 }
 
-/* wrapper_left */
+@mixin box-style($bg, $border, $radius) {
+  background: $bg;
+  border: $border;
+  border-radius: $radius;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: $font-size;
+}
+.background {
+  @include flex-center;
+  width: 100%;
+  height: 100vh;
+  background: url("./contents/2024020118023374242_1.jpg");
+}
+
+.outerbox {
+  @include box-style(
+    url("./contents/outerbox.png") center/cover no-repeat,
+    none,
+    $border-radius
+  );
+  width: 808px;
+  height: 544px;
+  position: relative;
+}
+.wrapper {
+  display: flex;
+  padding: 36px;
+}
+
 .wrapper_left {
   width: 203px;
   height: 472px;
@@ -42,21 +63,24 @@ $size: 14px;
   .wrapper_left_header {
     width: 100%;
     height: 30px;
-    font-size: $size;
-    display: flex;
-    justify-content: center;
+    font-size: $font-size;
+    @include flex-center;
     .zero {
       color: map-get($color, accent-color);
     }
   }
+
   .wrapper_left_body {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     height: 100%;
-    border: 1px solid map-get($color, bg-gray-color);
-    border-radius: 15px;
+    @include box-style(
+      map-get($color, bg-light-color),
+      1px solid map-get($color, bg-gray-color),
+      $border-radius
+    );
     padding: 26px;
     .left_body_header {
       width: 100%;
@@ -66,7 +90,8 @@ $size: 14px;
       .left_body_header_gray {
         width: 148px;
         height: 133px;
-        background: url("./contents/iu.jpg") center/cover no-repeat;
+        background: url("./contents/htm_2016080484837486184.jpg") center/cover
+          no-repeat;
       }
       .left_body_header_line {
         border-top: 1px dotted map-get($color, bg-dark-color);
@@ -75,8 +100,6 @@ $size: 14px;
       }
     }
     .left_body_profile {
-      width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -94,12 +117,15 @@ $size: 14px;
         .feel_title {
           font-weight: bold;
         }
+        select {
+          padding: 4px;
+          border-radius: $border-radius / 2;
+        }
       }
     }
   }
 }
 
-/* wrapper_right */
 .wrapper_right {
   width: 524px;
   height: 472px;
@@ -113,27 +139,30 @@ $size: 14px;
     color: map-get($color, theme-color);
     .right_header_title {
       font-weight: bold;
+      font-size: $font-size * 1.2;
     }
     .right_header {
-      font-size: $size;
+      font-size: $font-size;
     }
   }
   .wrapper_right_body {
     width: 100%;
     height: 445px;
-    border: 1px solid map-get($color, bg-gray-color);
-    border-radius: $size/2;
+    @include box-style(
+      map-get($color, bg-light-color),
+      1px solid map-get($color, bg-gray-color),
+      $font-size / 2
+    );
     background: map-get($color, bg-light-color);
     iframe {
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: $size/2;
+      border-radius: $font-size / 2;
     }
   }
 }
 
-/* navigation */
 .navigation {
   width: 70px;
   height: 110px;
@@ -143,6 +172,7 @@ $size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .navigation_item {
     width: 100%;
     height: 33px;
@@ -151,8 +181,36 @@ $size: 14px;
     text-align: center;
     line-height: 30px;
     border-radius: 0 10px 10px 0;
-    font-size: $size;
+    font-size: $font-size;
     border: 1px solid map-get($color, bg-dark-color);
     cursor: pointer;
+
+    &:hover {
+      background: darken(map-get($color, theme-color), 10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .outerbox {
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .wrapper_left,
+  .wrapper_right {
+    width: 100%;
+    height: auto;
+  }
+
+  .navigation {
+    top: 10%;
+    right: 0;
+    width: 50px;
   }
 }

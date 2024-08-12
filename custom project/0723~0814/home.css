@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /* reset */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -15,16 +16,17 @@ a {
   color: inherit;
 }
 
-/* built-in-function */
-/* mixin */
-/* common */
+/* 색상 및 크기 변수 */
+/* mixins */
+/* 공통 스타일 */
 html,
 body {
   width: 100%;
   height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
-/* home */
 .wrapper {
   width: 100%;
   height: 100%;
@@ -39,48 +41,46 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.wrapper .wrapper_header .contents_title {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.wrapper .wrapper_header .contents_title .title {
+.wrapper .wrapper_header .title {
   color: #55b2e4;
-  font: bold 14px/1 "arial";
+  font: 600 16px/1 "Arial";
 }
-.wrapper .wrapper_header .contents_title .subtitle {
-  font: normal 14px/1 "arial";
+.wrapper .wrapper_header .subtitle {
+  font: normal 14px/1 "Arial";
 }
 .wrapper .wrapper_header .divideLine {
   width: 100%;
   border-top: 1px solid #808080;
   margin: 4px 0;
 }
+.wrapper .wrapper_header .contents_body {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 .wrapper .wrapper_body {
   width: 100%;
   height: 270px;
-}
-.wrapper .wrapper_body .contents_title {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.wrapper .wrapper_body .contents_title .title {
+.wrapper .wrapper_body .title {
   color: #55b2e4;
-  font: bold 14px/1 "arial";
+  font: 600 16px/1 "Arial";
 }
-.wrapper .wrapper_body .contents_title .subtitle {
-  font: normal 14px/1 "arial";
-}
-.wrapper .wrapper_body .divideLine {
-  width: 100%;
-  border-top: 1px solid #808080;
-  margin: 4px 0;
+.wrapper .wrapper_body .subtitle {
+  font: normal 14px/1 "Arial";
 }
 .wrapper .wrapper_body .video {
   width: 100%;
   height: 240px;
-  background: url("./contents/iu_1.jpg") center/cover no-repeat;
+  background: url("./contents/htm_2016080484837486184.jpg") center/cover no-repeat;
   margin-top: 10px;
+  border-radius: 15px;
 }
