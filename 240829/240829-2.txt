@@ -1,0 +1,23 @@
+* 자바스크립트
+
+1.변수 : 원시타입 // 참조타입
+2.자료형 : 형변환
+3.연산자 : 산술 // 복합대입 / 증감 등
+4.조건문 : if // else if /else // 삼항조건
+5.반복문 : for // for of // for in // forEach // while // do while
+6.함수 : 화살표함수 // 콜백함수 // this
+7.DOM : queryselctor // queryselctorAll // 유사배열
+8.EVENT : 이벤트핸들러 // 이벤트버블링
+9.DOM 응용 : form && event
+10.객체 : 온점 // 대괄호 // 중첩객체
+11.Class : 생성자함수 // 상속 // 프로토타입 // 인스턴스
+12.문자열 : 메서드함수
+13.배열 : 인덱스, length, 메서드, 전개연산자
+*ES6문법 => 전개연산자, 구조분해할당, 심볼
+14.정규표현식 : 패턴 // 플래그
+15.데이터통신 : 서버 // 클라이언트 // 비동기 & 동기 // json
+16.Localstorage : session 간단한 개념 => todolist
+17.Geolocation : 카카오맵 // 공공데이터포털
+18.Canvas : 동적인 요소
+
++ 영화검색 + JS동적인 애니메이션
