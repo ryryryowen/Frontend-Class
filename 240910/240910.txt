@@ -1,0 +1,37 @@
+어제 최적화도 진행해봄. 
+
+Props 처리 비효율적으로 진행
+
+미들웨어
+
+하드웨어
+소프트웨어
+
+1. React.js 는 왜 사용하는가?
+- Component 기반 프로젝트 웹.앱 제작 // Module 방식 채택
+- Virtual DOM 효율적인 업데이트 // DOM 
+
+2. JSX 문법 = JavaScript XML 문법
+- props = property 약어. => 객체 (key + value)
+(컴포넌트 간 데이터 자료를 주고받을 때, 함수의 인자 & 매개변수)
+- 힘스향 컴포넌트
+- props Drilling > context > useContext
+
+- state = 상태 // 변수
+
+- setState( ) => state // 비동기적으로 작동
+
+자바스크립트는 태생적으로 싱글 스레드
+> 비동기 x //
+
+콜백함수 => 비동기처리!!!
+> 콜백 의미!!!
+> 함수 제어 > "함수" 호출 타이밍
+
+라우터!!!! > 수.송 중계기!!!
+페이지 라우터!!! => 페이지 분기
+구글 => 리액트 라우터 돔 // react-router-dom
+
+npm install react-router-dom
+
+package.json 에서 라우터 돔 확인하기 !! 꼭 !

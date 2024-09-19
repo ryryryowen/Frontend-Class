@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- anime.js -->
+    <script src="./anime.js"></script>
+    <!-- custom -->
+    <script defer src="./script.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      section {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .eye {
+          position: absolute;
+          left: calc(50% + 300px);
+        }
+        svg {
+          fill: none;
+          stroke: #fff;
+          stroke-width: 2;
+          width: 1200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <div class="eye"></div>
+      <svg class="svg" viewBox="0 0 536 268">
+        <path
+          d="M535.5 218.5C297.9 293.3 104.833 264.667 38 241L1 0.5"
+          stroke="black"
+        />
+      </svg>
+    </section>
+  </body>
+</html>

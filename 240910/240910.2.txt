@@ -1,0 +1,24 @@
+메인페이지 
+글작성페이지
+글확인페이지
+
+REST API
+-> 클라이언트 <-> 서버 통신 방법
+-> get//post 등등
+-> 제품 (*페이지)를 제작한다고 할 때, 해당 페이지 안에
+포함될 페이지들의 규칙성을 생성하고 제어,관리 할 수 있도록
+만들어놓은 시스템
+
+and 단락회로평가 : 
+좌항값 && 우항값
+
+Or 단락회로평가 :
+좌항값 || 우항값
+
+useState
+useRef
+useEffect
+useReducer
+useMemo
+useContext
+useNavigate
