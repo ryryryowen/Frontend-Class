@@ -19,7 +19,7 @@ const Textarea = styled.textarea`
   padding: 20px;
   font-size: 20px;
   font-family: "Nanum Pen Script", cursive;
-  width: 100%;
+  width: 93%;
   min-height: 200px;
   resize: none;
 `;
@@ -95,7 +95,7 @@ const Editor = ({ initData, onSubmit }) => {
   return (
     <div>
       <EditorSection>
-        <h4>훈동님의 탄생날짜</h4>
+        <h4>훈동님의 일기</h4>
         <div>
           <Input type="date" value={state.date} onChange={handleChangeDate} />
         </div>

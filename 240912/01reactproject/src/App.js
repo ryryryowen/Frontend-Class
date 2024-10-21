@@ -1,5 +1,6 @@
 import React, { useReducer, useRef, useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import GlobalStyle from "./styles/GlobalStyles.styles";
 import styled from "styled-components";
 import Home from "./pages/Home";
 import New from "./pages/New";
@@ -8,6 +9,8 @@ import Edit from "./pages/Edit";
 
 const Wrapper = styled.div`
   padding: 20px;
+  height: 100vh;
+  /* background: var(--primary-color); */
 `;
 
 const reducer = (state, action) => {
@@ -69,7 +72,7 @@ const App = () => {
     setIsDataLoaded(true);
   }, []);
 
-  const onCreate = (date, content, emotionId) => {
+  const onCreate = (date, emotionId, content) => {
     dispatch({
       type: "CREATE",
       data: {
@@ -104,18 +107,23 @@ const App = () => {
     return <div>데이터를 불러오는 중입니다!</div>;
   } else {
     return (
-      <DiaryStateContext.Provider value={data}>
-        <DiaryDispatchContext.Provider value={(onCreate, onUpdate, onDelete)}>
-          <Wrapper>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/new" element={<New />} />
-              <Route path="/diary/:id" element={<Diary />} />
-              <Route path="/edit/:id" element={<Edit />} />
-            </Routes>
-          </Wrapper>
-        </DiaryDispatchContext.Provider>
-      </DiaryStateContext.Provider>
+      <>
+        <GlobalStyle />
+        <DiaryStateContext.Provider value={data}>
+          <DiaryDispatchContext.Provider
+            value={{ onCreate, onUpdate, onDelete }}
+          >
+            <Wrapper>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/new" element={<New />} />
+                <Route path="/diary/:id" element={<Diary />} />
+                <Route path="/edit/:id" element={<Edit />} />
+              </Routes>
+            </Wrapper>
+          </DiaryDispatchContext.Provider>
+        </DiaryStateContext.Provider>
+      </>
     );
   }
 };

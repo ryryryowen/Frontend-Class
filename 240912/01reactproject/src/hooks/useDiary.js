@@ -4,7 +4,7 @@ import { DiaryStateContext } from "../App";
 
 const useDiary = (id) => {
   const data = useContext(DiaryStateContext);
-  const [diary, setDiary] = useState({});
+  const [diary, setDiary] = useState(); //useState({}) 안에 {} << 삭제하니까 해결
   const navigate = useNavigate();
   useEffect(() => {
     const matchDiary = data.find((it) => String(it.id) === String(id));
