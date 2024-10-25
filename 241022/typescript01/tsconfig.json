@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // 최신 ECMAScript 지원
+    "module": "ESNext", // 모듈 시스템을 ESM으로 설정
+    "moduleResolution": "node", // Node.js 스타일의 모듈 해석
+    "strict": false, // 엄격한 타입 검사
+    "skipLibCheck": true, // 라이브러리 타입 검사 생략
+    "moduleDetection": "force" // 타입스크립트 각 파일을 독립적인 모듈로 인식
+  },
+  // ts-node라는 컴파일러의 모듈을 설정
+  "ts-node": {
+    "esm": true // ESM 모듈 지원
+  },
+  // src라는 폴더안에있는 파일들을 ts로 컴파일링 하고자 할 때
+  "include": ["src/*/**"],
+  "exclude": ["node_modules"]
+}
