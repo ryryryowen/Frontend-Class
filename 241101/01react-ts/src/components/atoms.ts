@@ -1,14 +1,28 @@
-import { atom, selector } from "recoil";
+import { atom } from "recoil";
 
-export const minutesState = atom({
-  key: "minutes",
-  default: 0,
-});
+export interface ToDo {
+  id: number;
+  text: string;
+}
 
-export const hoursSelector = selector({
-  key: "hours",
-  get: ({ get }) => {
-    const minutes = get(minutesState);
-    return minutes / 60;
+interface ToDoState {
+  [key: string]: ToDo[];
+}
+
+export const toDoState = atom<ToDoState>({
+  key: "toDo",
+  default: {
+    ToDo: [
+      {
+        id: 1,
+        text: "리액트 복습하기",
+      },
+      {
+        id: 2,
+        text: "포폴준비하기",
+      },
+    ],
+    Doing: [],
+    Done: [],
   },
 });
