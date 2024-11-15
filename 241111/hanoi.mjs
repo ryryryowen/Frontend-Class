@@ -8,23 +8,23 @@ const hanoi = (count, from, to, temp) => {
 hanoi(3, "A", "B", "C");
 
 
-const hanoi = (3, A, C, B) => {
-  if (3 === 0) return;
-  hanoi(3 - 1, A, B, C);
-  console.log(`원반 ${3}을 ${A}에서 ${C}으로 이동!`);
-  hanoi(3 - 1, B, C, A);
-}
+// const hanoi1= (3, A, C, B) => {
+//   if (3 === 0) return;
+//   hanoi(3 - 1, A, B, C);
+//   console.log(`원반 ${3}을 ${A}에서 ${C}으로 이동!`);
+//   hanoi(3 - 1, B, C, A);
+// }
 
-const hanoi = (2, A, B, C) => {
-  if (2 === 0) return;
-  hanoi(2 - 1, A, C, B);
-  console.log(`원반 ${2}을 ${A}에서 ${B}으로 이동!`);
-  hanoi(2 - 1, C, B, A);
-}
+//     const hanoi2 = (2, A, B, C) => {
+//   if (1 === 0) return;
+//   hanoi(1 - 1, A, C, B);
+//   console.log(`원반 ${1}을 ${A}에서 ${B}으로 이동!`);
+//   hanoi(1 - 1, C, B, A);
+// }
 
-const hanoi = (1, B, C, A) => {
-  if (2 === 0) return;
-  hanoi(2 - 1, B, A, C);
-  console.log(`원반 ${1}을 ${B}에서 ${C}으로 이동!`);
-  hanoi(2 - 1, A, C, B);
-}
+// const hanoi3 = (1, B, C, A) => {
+//   if (1 === 0) return;
+//   hanoi(1 - 1, B, A, C);
+//   console.log(`원반 ${1}을 ${B}에서 ${C}으로 이동!`);
+//   hanoi(1 - 1, A, C, B);
+// }
